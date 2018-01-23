@@ -2,12 +2,12 @@ package variables
 
 import "testing"
 
-func Test_varStatement_Shoul_notThrowException(t *testing.T) {
+func Test_varStatement_Should_notThrowException(t *testing.T) {
 
 	varStatment()
 }
 
-func Test_declarations_Shoul_notThrowException(t *testing.T) {
+func Test_declarations_Should_notThrowException(t *testing.T) {
 
 	declarations()
 }
