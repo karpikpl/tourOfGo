@@ -1,5 +1,7 @@
 package functions
 
+// functions that start with capital case are exported
+
 func Add(x int, y int) int {
 	return x + y
 }
