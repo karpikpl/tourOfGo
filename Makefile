@@ -9,7 +9,7 @@ default: build
 build: install vet compile
 
 compile:
-	go build -v -o ${DIR_BIN}/tourofgo \
+	go build -v -o ${DIR_BIN}/tourOfGo \
 	-ldflags "-X main.Version=${VERSION}" \
 	./main.go
 

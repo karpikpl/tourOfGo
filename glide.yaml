@@ -1,4 +1,4 @@
-package: github.com/karpikpl/tourofgo
+package: github.com/karpikpl/tourOfGo
 import: []
 testImport:
 - package: github.com/stretchr/testify
