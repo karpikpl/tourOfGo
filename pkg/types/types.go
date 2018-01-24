@@ -75,8 +75,24 @@ func conversions() {
 
 const Pi = 3.14
 
+const (
+	// An untyped constant takes the type needed by its context.
+	// binary number that is 1 followed by 100 zeroes.
+	Big   = 1 << 100
+	Small = Big >> 99
+)
+
 func constants() {
 	const helloWorld = "hello 世界"
 
 	fmt.Printf("%v: Pi %v is of the type %T\n", helloWorld, Pi, Pi)
+
+	// need to cast before using
+	// fmt.Println(Big) <-- this doesn't compile
+	fmt.Printf("%T: %v\n", needFloat(Big), needFloat(Big))
+	fmt.Printf("%T: %v\n", Small, Small)
+}
+
+func needFloat(x float64) float64 {
+	return x
 }
