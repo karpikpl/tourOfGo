@@ -1,16 +1,9 @@
-#!/usr/bin/env bash
-# Copyright 2017 The Go Authors. All rights reserved.
-# Use of this source code is governed by a BSD-style
-# license that can be found in the LICENSE file.
-#
-# This script will generate coverage.txt
-set -e
+#!/bin/bash
+# https://stackoverflow.com/questions/45776043/codeclimate-test-coverage-formatter-for-golang#45776499
 
-PKGS=$(go list ./... | grep -v /vendor/)
-for pkg in $PKGS; do
-  go test -race -coverprofile=profile.out -covermode=atomic $pkg
-  if [[ -f profile.out ]]; then
-    cat profile.out >> coverage.txt
-    rm profile.out
-  fi
+for pkg in $(go list ./... | grep -v vendor); do
+    go test -coverprofile=$(echo $pkg | tr / -).cover $pkg
 done
+echo "mode: set" > c.out
+grep -h -v "^mode:" ./*.cover >> c.out
+rm -f *.cover

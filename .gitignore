@@ -1,5 +1,4 @@
 *.exe
 bin/
-coverageReport.out
 vendor/
-coverage.txt
+c.out
