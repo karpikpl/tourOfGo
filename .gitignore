@@ -2,3 +2,4 @@
 bin/
 coverageReport.out
 vendor/
+coverage.txt
