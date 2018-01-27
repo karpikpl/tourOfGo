@@ -26,6 +26,6 @@ func infiniteLoop() int {
 		if sum > 45 {
 			return sum
 		}
-		sum += 1
+		sum++
 	}
 }
