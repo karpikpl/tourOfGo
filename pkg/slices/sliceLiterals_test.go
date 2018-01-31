@@ -11,6 +11,7 @@ import (
 func Test_sliceLiterals(t *testing.T) {
 
 	// Arrange
+	//arrays are passed by value and don't store their size (it's in their type)
 	array := [3]int{5, 15, 20}
 	slice := []int{5, 15, 20}
 	s := []struct {
